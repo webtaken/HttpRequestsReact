@@ -19,7 +19,7 @@ function App() {
       // you can also try to configure environment files (.env) 
       // and replace line bellow with: 
       // const response = await fetch(process.env.FIREBASE_APP_API);
-      const response = await fetch("<your-firebase-url/movies.js>");
+      const response = await fetch("<your-firebase-url/movies.json>");
 
       if (!response.ok) {
         throw new Error("Something went wrong fetching the data :(");
@@ -53,7 +53,7 @@ function App() {
     // you can also try to configure environment files (.env) 
     // and replace line bellow with: 
     // const response = await fetch(process.env.FIREBASE_APP_API);
-    const response = await fetch("<your-firebase-url/movies.js>", {
+    const response = await fetch("<your-firebase-url/movies.json>", {
       method: "POST",
       body: JSON.stringify(movie),
       headers: {
